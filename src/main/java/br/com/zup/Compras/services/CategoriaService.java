@@ -24,4 +24,11 @@ public class CategoriaService {
         }
         return categoriaId.get();
     }
+    public void deletarCategoria(Integer id){
+        if(!categoriaRepository.existsById(id)){
+            throw new CategoriaNaoLocalizadaException("Não foi possível deletar essa categoria.Favor, verificar");
+        }else{
+            categoriaRepository.deleteById(id);
+        }
+    }
 }

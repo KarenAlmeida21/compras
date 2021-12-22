@@ -37,6 +37,6 @@ public class CategoriaController {
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deletarcategoriaPorId(@PathVariable Integer id) {
-        //  categoriaService.deletarCategoria(id);
+        categoriaService.deletarCategoria(id);
     }
 }
